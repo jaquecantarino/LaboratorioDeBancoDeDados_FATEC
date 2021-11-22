@@ -1,0 +1,54 @@
+/*
+LBD P2 - Jaqueline
+*/
+--7 Transforme o modelo RELACIONAL acima em um modelo DOCUMENTAL NOSQL 
+
+
+db.PACIENTE.insert({"_id":{"$oid":"60c93bbca07f14b0e01532ff"},"codigoPaciente":{"$numberLong":"1"},
+"nomePaciente":"Ana Maria","telefonePac":"98745-7485","genero":"Feminino","idade":{"$numberLong":"32"}})
+
+db.PACIENTE.insert({"_id":{"$oid":"60c93c45620a1f3ca0a6ff31"},"codigoPaciente":{"$numberLong":"2"},
+"nomePaciente":"Bruno Cesar","telefonePac":"97485-1245","genero":"Masculino","idade":{"$numberLong":"29"}})
+
+db.PACIENTE.insert({"_id":{"$oid":"60c93c66620a1f3ca0a6ff32"},"codigoPaciente":{"$numberLong":"3"},
+"nomePaciente":"Carla Souza","telefonePac":"94356-8040","genero":"Feminino","idade":{"$numberLong":"43"}})
+
+db.PACIENTE.insert({"_id":{"$oid":"60c93c86620a1f3ca0a6ff33"},"codigoPaciente":{"$numberLong":"4"},
+"nomePaciente":"Douglas Silva","telefonePac":"97841-3698","genero":"Masculino","idade":{"$numberLong":"19"}})
+
+db.MEDICO.insert({"_id":{"$oid":"60c938c8a07f14b0e01532fc"},"codigoMedico":{"$numberLong":"1"},
+"nomeMedico":"Augusto Soares","telefoneMed":"94578-2356","crm":{"$numberLong":"45879"},"especialidade":"Pediatria"})
+
+db.MEDICO.insert({"_id":{"$oid":"60c93b39620a1f3ca0a6ff2e"},"codigoMedico":{"$numberLong":"2"},
+"nomeMedico":"Bruna Rodrigues","telefoneMed":"97489-1478","crm":{"$numberLong":"32659"},"especialidade":"Ortopedia"})
+
+db.MEDICO.insert({"_id":{"$oid":"60c93b62620a1f3ca0a6ff2f"},"codigoMedico":{"$numberLong":"3"},
+"nomeMedico":"Carolina Suzana","telefoneMed":"96543-8722","crm":{"$numberLong":"74859"},"especialidade":"Otorrinolaringologia"})
+
+db.MEDICO.insert({"_id":{"$oid":"60c93ba0620a1f3ca0a6ff30"},"codigoMedico":{"$numberLong":"4"},
+"nomeMedico":"Daniele Silva","telefoneMed":"98569-2587","crm":{"$numberLong":"45879"},"especialidade":"Clinica Geral"})
+
+db.CONSULTA.insert({"_id":{"$oid":"60c93c9aa07f14b0e0153300"},"codigoConsulta":{"$numberLong":"1"},"dataConsulta":{"$date":"2021-11-21T09:30:15.000Z"},
+"historico":"Primeira consulta","status":{"$numberLong":"1"},"codigoMedico":{"$numberLong":"1"},"codigoPaciente":{"$numberLong":"4"}})
+
+db.CONSULTA.insert({"_id":{"$oid":"60c93d7c620a1f3ca0a6ff34"},"codigoConsulta":{"$numberLong":"2"},"dataConsulta":{"$date":"2021-06-14T12:47:53.000Z"},
+"historico":"Retorno para apresentação de exames","status":{"$numberLong":"2"},"codigoMedico":{"$numberLong":"2"},"codigoPaciente":{"$numberLong":"3"}})
+
+db.CONSULTA.insert({"_id":{"$oid":"60c93da9620a1f3ca0a6ff35"},"codigoConsulta":{"$numberLong":"3"},"dataConsulta":{"$date":"2021-11-18T15:41:20.000Z"},
+"historico":"Acompanhamento","status":{"$numberLong":"3"},"codigoMedico":{"$numberLong":"3"},"codigoPaciente":{"$numberLong":"2"}})
+
+db.CONSULTA.insert({"_id":{"$oid":"60c93de1620a1f3ca0a6ff36"},"codigoConsulta":{"$numberLong":"4"},"dataConsulta":{"$date":"2021-11-13T17:32:13.000Z"},
+"historico":"Primeira consulta","status":{"$numberLong":"1"},"codigoMedico":{"$numberLong":"4"},"codigoPaciente":{"$numberLong":"1"}})
+
+db.RECEITA.insert({"_id":{"$oid":"60c93e07a07f14b0e0153301"},"codigoReceita":{"$numberLong":"1"},"dataReceita":{"$date":"2021-11-16T03:00:00.000Z"},
+"descritivo":"Tomar 1 capsula 3x ao dia, 8 em 8 horas","codigoConsulta":{"$numberLong":"4"}})
+
+db.RECEITA.insert({"_id":{"$oid":"60c93e8d620a1f3ca0a6ff37"},"codigoReceita":{"$numberLong":"2"},"dataReceita":{"$date":"2021-11-15T03:00:00.000Z"},
+"descritivo":"Tomar 300ml 2x ao dia","codigoConsulta":{"$numberLong":"3"}})
+
+db.RECEITA.insert({"_id":{"$oid":"60c93eb8620a1f3ca0a6ff38"},"codigoReceita":{"$numberLong":"3"},"dataReceita":{"$date":"2021-11-16T03:00:00.000Z"},
+"descritivo":"Tomar 2 capsula 1x ao dia","codigoConsulta":{"$numberLong":"2"}})
+
+db.RECEITA.insert({"_id":{"$oid":"60c93ed2620a1f3ca0a6ff39"},"codigoReceita":{"$numberLong":"4"},"dataReceita":{"$date":"2021-11-21T03:00:00.000Z"},
+"descritivo":"Caso tenha febre, tomar paracetamol de 6 em 6 horas","codigoConsulta":{"$numberLong":"1"}})
+
